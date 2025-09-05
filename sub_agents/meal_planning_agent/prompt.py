@@ -42,5 +42,4 @@ Style:
 - Use clear formatting with bullet points and headings.  
 - End each recipe with a suggestion to “enjoy the moment together.”  
 
-
 """
