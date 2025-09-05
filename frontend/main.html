@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Date Planner — Home</title>
+  <title>Date Planner 💞</title>
+  <!--<link rel="stylesheet" href="style.css">-->
   <style>
     :root{
       --bg: #fff4f7;
@@ -42,6 +43,10 @@
     .hero h2{font-size:32px;margin:0 0 8px}
     .subtitle{color:#7c4d5b;margin-bottom:16px}
     .cta{display:flex;gap:10px;flex-wrap:wrap}
+
+    #scrollToChat {
+    color: #ff6b9e;
+  }
 
     .illustration{position:relative;height:260px;border-radius:var(--radius-lg);background:radial-gradient(120px 120px at 20% 40%, #ffd6e6 0%, #ffd6e600 70%),radial-gradient(160px 160px at 80% 60%, #ffc2d1 0%, #ffc2d100 70%),#fff;border:1px solid var(--border);box-shadow:var(--shadow)}
     .bubbles{position:absolute;inset:0;display:grid;place-items:center;font-size:48px}
@@ -85,23 +90,28 @@
     <section id="page-home" class="active">
       <div class="hero">
         <div class="hero-card">
-          <h2>Plan adorable dates—without the stress.</h2>
-          <p class="subtitle">Welcome! Amora helps you discover cute date ideas, get recipes with what you have at home, set the perfect mood with decor and fragrances, and build a sweet itinerary.</p>
+          <h2>Plan adorable dates, without the stress!</h2>
+          <p class="subtitle">Welcome! Amora helps you explore cute date ideas, discover recipes with what you have at home, set the perfect mood with decor and fragrances, and build a sweet itinerary.</p>
           <div class="cta">
             <a class="btn primary" href="#chat" id="scrollToChat">Start Planning ✨</a>
-            <a class="btn" href="#/ideas">Browse Ideas 💡</a>
+            <!--<a class="btn" href="#/ideas">Browse Ideas 💡</a>-->
           </div>
         </div>
-        <div class="illustration"><div class="bubbles">💞</div></div>
+      <!--<div class="illustration"><div class="bubbles">💞</div></div>-->
+      <div class="illustration">
+        <div class="bubbles">
+          <span class="float">💞</span>
+        </div>
+      </div>
       </div>
 
       <div class="chat-section" id="chat">
-        <h2>💬 Chat with your planning assistant</h2>
+        <h2>💬 Ask Amora Anything!</h2>
         <div class="chat-box">
           <div class="messages" id="messages"></div>
           <div class="composer">
             <input id="chatInput" placeholder="Type your message…" />
-            <button class="btn" id="sendBtn">Send</button>
+            <span id="sendHeart" style="cursor:pointer; font-size:24px;">💞</span>
           </div>
         </div>
       </div>
@@ -110,7 +120,7 @@
       <div class="cards">
         <div class="card">
           <h3>💡 Date Ideas</h3>
-          <p>Pick themes like cozy movie night, DIY spa, or candlelit dinner—get prompts with budget-friendly tips and creative ideas for making your night special.</p>
+          <p>Pick themes like cozy movie night, DIY spa, or candlelit dinner. Get prompts with budget-friendly tips and creative ideas for making your night special.</p>
         </div>
         <div class="card">
           <h3>🍝 Restaurant Scout</h3>
@@ -118,7 +128,7 @@
         </div>
         <div class="card">
           <h3>🗓️ Itinerary Builder</h3>
-          <p>Drag friendly time blocks for activities and breaks—then export or share.</p>
+          <p>Drag friendly time blocks for activities and breaks, then export or share.</p>
         </div>
       </div>
     </section>
