@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Date Planner — Home</title>
+  <style>
+    :root{
+      --bg: #fff4f7;
+      --panel: #ffe9ef;
+      --panel-2:#ffdfe8;
+      --muted:#9b6b7a;
+      --text:#4a2630;
+      --brand:#ff6b9e;
+      --ok:#ff6fa7;
+      --warn:#ffb3c1;
+      --err:#ff4d6d;
+      --border:#f4c6d3;
+      --input:#fff;
+      --shadow: 0 14px 32px rgba(255, 105, 180, .20), 0 1px 0 rgba(255,255,255,.7) inset;
+      --radius:18px;
+      --radius-lg:24px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:radial-gradient(1200px 600px at 80% -10%, #ffe0ea 0%, #ffe9f0 40%, var(--bg) 70%), var(--bg);color:var(--text);font: 15px/1.55 system-ui, -apple-system, Segoe UI, Roboto, Inter, Helvetica, Arial;}
+
+    header{position:sticky;top:0;z-index:10;backdrop-filter:saturate(120%) blur(10px);background:linear-gradient(180deg, rgba(255,236,242,.92), rgba(255,236,242,.78));border-bottom:1px solid var(--border);}
+    .nav{max-width:1160px;margin:auto;padding:14px 16px;display:flex;gap:16px;align-items:center;justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:32px;height:32px;border-radius:10px;background:conic-gradient(from 180deg, #ff99c8, #ffc2d1, #ff99c8);box-shadow:0 8px 22px rgba(255,105,180,.35), inset 0 0 20px rgba(255,255,255,.9);}
+    h1{font-size:18px;margin:0;font-weight:800}
+
+    .site-nav{display:flex;gap:8px;flex-wrap:wrap}
+    .site-link{padding:10px 12px;border-radius:999px;border:1px solid var(--border);background:#fff;text-decoration:none;color:var(--text);font-weight:600;transition:.18s}
+    .site-link[aria-current="page"], .site-link:hover{border-color:#f0a9bb;box-shadow:var(--shadow)}
+
+    main{min-height:70vh}
+    .layout{max-width:1160px;margin:22px auto 64px;padding:0 16px}
+
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:center}
+    .hero-card{background:linear-gradient(180deg,#fff,#fff5f8);border:1px solid var(--border);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow)}
+    .hero h2{font-size:32px;margin:0 0 8px}
+    .subtitle{color:#7c4d5b;margin-bottom:16px}
+    .cta{display:flex;gap:10px;flex-wrap:wrap}
+
+    .illustration{position:relative;height:260px;border-radius:var(--radius-lg);background:radial-gradient(120px 120px at 20% 40%, #ffd6e6 0%, #ffd6e600 70%),radial-gradient(160px 160px at 80% 60%, #ffc2d1 0%, #ffc2d100 70%),#fff;border:1px solid var(--border);box-shadow:var(--shadow)}
+    .bubbles{position:absolute;inset:0;display:grid;place-items:center;font-size:48px}
+
+    .chat-section{margin-top:40px}
+    .chat-box{background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);box-shadow:var(--shadow);padding:20px;min-height:300px;display:flex;flex-direction:column;}
+    .messages{flex:1;overflow:auto;padding:12px;display:flex;flex-direction:column;gap:10px;background:linear-gradient(180deg,#fff5f8,#fff)}
+    .msg{max-width:80%;padding:10px 12px;border-radius:12px;border:1px solid var(--border);background:linear-gradient(180deg,#fff,#ffeef4)}
+    .msg.user{align-self:flex-end;background:linear-gradient(180deg,#ffe5ee,#ffd6e6);border-color:#f0a9bb}
+    .msg.agent{align-self:flex-start}
+    .composer{display:flex;gap:8px;padding:10px;border-top:1px solid var(--border);background:#fff0f5}
+    .composer input{flex:1;background:var(--input);border:1px solid var(--border);border-radius:12px;padding:12px;color:var(--text)}
+
+    .cards{display:grid;gap:16px;grid-template-columns:repeat(auto-fit, minmax(260px,1fr));margin-top:40px}
+    .card{background:linear-gradient(180deg,var(--panel),var(--panel-2));border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px}
+
+    footer{max-width:1160px;margin:24px auto 56px;padding:0 16px;color:#a46c7b;font-size:13px}
+
+    @media(max-width:900px){.hero{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <div class="logo"></div>
+        <h1>Date Planner</h1>
+      <!-- </div>
+      <nav class="site-nav">
+        <a class="site-link" href="#/" data-route aria-current="page">Home</a>
+        <a class="site-link" href="#/planner" data-route>Planner</a>
+        <a class="site-link" href="#/ideas" data-route>Ideas</a>
+        <a class="site-link" href="#/restaurants" data-route>Restaurants</a>
+        <a class="site-link" href="#/itinerary" data-route>Itinerary</a>
+        <a class="site-link" href="#/about" data-route>About</a>
+      </nav>
+    </div>-->
+  </header>
+
+  <main class="layout">
+    <section id="page-home" class="active">
+      <div class="hero">
+        <div class="hero-card">
+          <h2>Plan adorable dates—without the stress.</h2>
+          <p class="subtitle">Welcome! Amora helps you discover cute date ideas, get recipes with what you have at home, set the perfect mood with decor and fragrances, and build a sweet itinerary.</p>
+          <div class="cta">
+            <a class="btn primary" href="#chat" id="scrollToChat">Start Planning ✨</a>
+            <a class="btn" href="#/ideas">Browse Ideas 💡</a>
+          </div>
+        </div>
+        <div class="illustration"><div class="bubbles">💞</div></div>
+      </div>
+
+      <div class="chat-section" id="chat">
+        <h2>💬 Chat with your planning assistant</h2>
+        <div class="chat-box">
+          <div class="messages" id="messages"></div>
+          <div class="composer">
+            <input id="chatInput" placeholder="Type your message…" />
+            <button class="btn" id="sendBtn">Send</button>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="margin:40px 0 12px">What you can do</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>💡 Date Ideas</h3>
+          <p>Pick themes like cozy movie night, DIY spa, or candlelit dinner—get prompts with budget-friendly tips and creative ideas for making your night special.</p>
+        </div>
+        <div class="card">
+          <h3>🍝 Restaurant Scout</h3>
+          <p>Collect romantic restaurants and dessert bars with notes and vibes.</p>
+        </div>
+        <div class="card">
+          <h3>🗓️ Itinerary Builder</h3>
+          <p>Drag friendly time blocks for activities and breaks—then export or share.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>Built with 💗 for stress‑free planning.</footer>
+
+  <script>
+    const messages = document.getElementById('messages');
+    const input = document.getElementById('chatInput');
+    const sendBtn = document.getElementById('sendBtn');
+
+    function pushMessage(role, text){
+      const div = document.createElement('div');
+      div.className = 'msg ' + role;
+      div.textContent = text;
+      messages.appendChild(div);
+      messages.scrollTop = messages.scrollHeight;
+    }
+
+    sendBtn.addEventListener('click', ()=>{
+      const text = input.value.trim();
+      if(!text) return;
+      pushMessage('user', text);
+      input.value = '';
+      setTimeout(()=>{ pushMessage('agent', `I noted: "${text}" — let’s make it cute! 💕`); },500);
+    });
+
+    document.getElementById('scrollToChat').addEventListener('click', e=>{
+      e.preventDefault();
+      document.getElementById('chat').scrollIntoView({behavior:'smooth'});
+    });
+  </script>
+</body>
+</html>

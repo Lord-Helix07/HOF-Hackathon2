@@ -14,4 +14,4 @@ meal_planning_agent = Agent(
     output_key="meal_planning_result",
 )
 
-root_agent = meal_planning_agent
+

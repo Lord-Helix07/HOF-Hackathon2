@@ -14,4 +14,4 @@ mood_agent = Agent(
     output_key="mood_result",
 )
 
-root_agent = mood_agent
+
