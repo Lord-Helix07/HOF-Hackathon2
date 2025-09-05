@@ -13,3 +13,5 @@ meal_planning_agent = Agent(
     instruction=prompt.MEAL_PLANNING_PROMPT,
     output_key="meal_planning_result",
 )
+
+root_agent = meal_planning_agent
